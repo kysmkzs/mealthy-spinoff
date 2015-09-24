@@ -1,0 +1,135 @@
+<body>
+<BR><BR>
+<h1>Menu Register</h1>
+
+<form>
+<div class="container-fluid">
+  <div class="row">
+    <div class="form-group">
+      <label for="menu_name" class="col-md-3 control-label">登録メニュー名</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="menu_name" placeholder="名前">
+        <!-- 
+        <%= f.text_field :menu_name %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="category" class="col-md-3 control-label">メニューカテゴリー</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="category" placeholder="カテゴリー">
+        <!-- 
+        <%= f.text_field :category %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="brand" class="col-md-3 control-label">ブランド</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="brand" placeholder="ブランド">
+        <!-- 
+        <%= f.text_field :brand %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price" class="col-md-3 control-label">価格[円]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="price" placeholder="価格（税込）">
+        <!-- 
+        <%= f.text_field :price %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="calorie" class="col-md-3 control-label">カロリー[kcal]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="calorie" placeholder="カロリー">
+        <!-- 
+        <%= f.text_field :calorie %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="protein" class="col-md-3 control-label">たんぱく質[g]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="proteine" placeholder="たんぱく質">
+        <!-- 
+        <%= f.text_field :protein %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="lipid" class="col-md-3 control-label">脂質[g]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="lipid" placeholder="脂質">
+        <!-- 
+        <%= f.text_field :lipid %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="carbohydrate" class="col-md-3 control-label">炭水化物[g]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="carbohydrate" placeholder="炭水化物">
+        <!-- 
+        <%= f.text_field :carbohydrate %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="sodium" class="col-md-3 control-label">塩分(Na)[mg]</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="sodium" placeholder="塩分">
+        <!-- 
+        <%= f.text_field :sodium %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gluten" class="col-md-3 control-label">小麦含有の有無</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="gluten" placeholder="グルテン">
+        <!-- 
+        <%= f.text_field :gluten %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="vege" class="col-md-3 control-label">ベジタリアン対応</label>
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="vege" placeholder="ベジタリアン">
+        <!-- 
+        <%= f.text_field :vege %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="recommend" class="col-md-3 control-label">メニューの評価</label>
+      <div class="col-md-9">
+        <textarea class="form-control" id="inputContent" rows="4" placeholder="メニューのオススメポイントを具体的にお書きください"></textarea>
+        <!-- 
+        <%= f.text_area :body, :size => "50%" %>
+        -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile" class="col-md-3 control-label">メニュー画像ファイルを添付</label>
+      <div class="col-md-9">
+        <input type="file" id="exampleInputFile">
+      </div>
+    </div><br>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default btn-success btn-block">登録する</button>
+        <!-- 
+        <%= f.submit class: "btn btn-danger" %>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+</body>
+
+</html>
