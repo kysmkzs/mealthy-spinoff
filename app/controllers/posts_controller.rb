@@ -10,6 +10,14 @@ class PostsController < ApplicationController
       render 'static_pages/home'
     end
   end
+
+  def destroy
+    @post = current_user.posts.find_by(id: params[:id])
+    return redirect_to root_url if @post.nil?
+    @post.destroy
+    flash[:success] = "Post deleted"
+    redirect_to request.referrer || root_url
+  end
   
   private
   def post_params
