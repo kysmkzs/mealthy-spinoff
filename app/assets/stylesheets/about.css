@@ -3,12 +3,6 @@
   padding: 0;
 }
 
-body {
-  font-family: YuGothic, "游ゴシック", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
-  background-color: #ddd;
-  font-size: 14px;
-}
-
 /*--logo----------------------------------------------------------*/
 #logo {
   padding: 20px 20px;
@@ -26,7 +20,6 @@ td img {
   border: 0px solid #000;
   border-radius: 100%;
 }
-
 
 #logo h1 {
   letter-spacing: 0.15em;
@@ -69,7 +62,6 @@ nav ul li a.selected {
   color: #000;
 }
 
-
 nav img {
   max-width: 30px;
   border: 1px solid #000;
@@ -93,28 +85,6 @@ nav .dropdown a {
 }
 
 /*--contents----------------------------------------------------------*/
-#content0 {
-  background-image: url("map.jpeg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-bottom: 350px;
-}
-
-#content1 {
-  margin: 0 0;
-}
-
-#content2 {
-  background-color: blue;
-  text-align: center;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight:bold;
-  vertical-align:middle;
-  margin: 0 0;
-  padding: 10px 0px;
-}
 
 .col-sm-3 {
   padding: 10px 0px;
@@ -139,39 +109,4 @@ nav .dropdown a {
 
 .col-md-12 img p {
   text-align: center;
-}
-
-#content3 {
-  background-color: white;
-  color: #000000;
-  text-align: center;
-  font-size: 24px;
-  font-weight:bold;
-  margin: 0px 0px;
-  padding: 10px 0px;
-}
-
-#content3 img {
-  max-width: 100%;
-  margin: 0 0;
-  padding: 0px 0px;
-}
-
-#content4 {
-  background-color: red;
-  color: #ffffff;
-  text-align: center;
-  font-size: 18px;
-  margin: 0 0;
-  padding: 10px 0px;
-}
-
-.fa {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #ffffff;
-}
-
-.fa:hover {
-  color: blue;
 }

@@ -3,20 +3,20 @@ class MenusController < ApplicationController
     @menu = Menu.new
   end
 
+  def index
+    @menus = Menu.all
+  end
+
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      flash[:success] = "Welcome to the world of Mealthy!!!"
+      flash[:success] = "Enjoy Healthy Meal !"
       redirect_to @menu
     else
       render 'new'
     end
   end
   
-  def show
-    @menu = Menu.find(params[:id])
-  end
-
   def edit
     @menu = Menu.find(params[:id])
   end
@@ -32,7 +32,6 @@ class MenusController < ApplicationController
  
 
   private
-
   def menu_params
     params.require(:menu).permit(:name, :calorie, :image)
   end

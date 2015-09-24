@@ -1,17 +1,17 @@
-<h1>Menu Register</h1>
+<h3>Menu Register</h3>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@menu) do |f| %>
 
-      <%= f.label :name %>
+      <%= f.label :メニュー名 %>
       <%= f.text_field :name %>
 
-      <%= f.label :calorie %>
+      <%= f.label :カロリー %>
       <%= f.text_field :calorie %>
 
-      <%= f.label :image %>
-      <%= f.file_field :image %><br>
+      <%= f.label :メニュー写真 %>
+      <%= f.file_field :image %><br><br>
 
       <%= f.submit "R E G I S T E R", class: "btn btn-large btn-danger" %>
     <% end %>

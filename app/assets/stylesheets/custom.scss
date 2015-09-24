@@ -2,9 +2,8 @@
 @import "bootstrap";
 
 /* universal */
-
 body {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 section {
@@ -51,9 +50,13 @@ p {
 }
 
 /* header */
+.logo {
+  text-align: center;
+  padding-top: 50px;
+}
 
 #logo {
-  float: left;
+  float: center;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
@@ -135,8 +138,8 @@ aside {
 }
 
 .gravatar {
-  float: left;
-  margin-right: 10px;
+  float:center;
+  margin-right: 0px;
 }
 
 .gravatar_edit {
@@ -192,7 +195,7 @@ span.picture {
 
 
 header {
-  height: 60px;
+  height: 0px;
   .navbar {
     width: 100%;
     margin: 0;

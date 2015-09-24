@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   root to: 'static_pages#home'
-  get  'feed',  to: 'static_pages#show'
-  get 'signup',  to: 'users#new'
+  get    'feed',  to: 'static_pages#show'
+  get    'signup',  to: 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  get 'register',  to: 'menus#new'
+  get    'register',  to: 'menus#new'
+  get    'menus/index',  to: 'menus#index'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
