@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'static_pages#home'
+  get  'feed',  to: 'static_pages#show'
   get 'signup',  to: 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
   resources :relationships, only: [:create, :destroy]
+  resources :feeds, only: [:show]
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
