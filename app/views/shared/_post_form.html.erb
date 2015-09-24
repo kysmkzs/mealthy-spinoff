@@ -1,7 +1,10 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new post..." %>
+    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
+  <br>
   <%= f.submit "S H A R E", class: "btn btn-danger" %>
 <% end %>
