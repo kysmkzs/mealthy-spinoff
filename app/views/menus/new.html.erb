@@ -1,0 +1,19 @@
+<h1>Menu Register</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@menu) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :calorie %>
+      <%= f.text_field :calorie %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %><br>
+
+      <%= f.submit "R E G I S T E R", class: "btn btn-large btn-danger" %>
+    <% end %>
+  </div>
+</div>

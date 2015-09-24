@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get 'register',  to: 'menus#new'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
   resources :relationships, only: [:create, :destroy]
   resources :feeds, only: [:show]
+  resources :menus
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
