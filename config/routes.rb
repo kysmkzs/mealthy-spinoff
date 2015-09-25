@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   get    'register',  to: 'menus#new'
   get    'menus/index',  to: 'menus#index'
+  get    'lowcalorie',  to: 'menus#lowcalorie'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

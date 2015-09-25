@@ -29,8 +29,11 @@ class MenusController < ApplicationController
       render 'edit'
     end
   end
- 
 
+  def lowcalorie
+    @menu = Menu.order("calorie asc")
+  end
+ 
   private
   def menu_params
     params.require(:menu).permit(:name, :calorie, :image)

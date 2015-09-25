@@ -15,7 +15,7 @@
             <ul class="dropdown-menu">
               <li><%= link_to "プロフィール", current_user %></li>
               <li class="divider"></li>
-              <li><%= link_to "アカウント設定", "#" %></li>
+              <li><%= link_to "アカウント設定", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li><%= link_to "友達を招待", "#" %></li>
               <li class="divider"></li>
@@ -31,7 +31,3 @@
   </nav>
 </div>
 </header>
-
-<div class="logo">
-    <%= link_to image_tag('logo-color.png'), root_path %>
-</div>

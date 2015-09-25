@@ -1,0 +1,14 @@
+  <div class="row">
+    <aside class="col-md-4">
+    </aside>
+    <div class="col-md-8">
+      <div>
+        <% @menus.each do |menu| %>
+          <li class="posts">
+            <p>メニュー名：<%= menu.name %></p>
+            <p>カロリー[kcal]：<%= menu.calorie %></p><br>
+          </li>
+        <% end %>
+      </div>
+    </div>
+  </div>
