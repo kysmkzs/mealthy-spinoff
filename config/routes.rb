@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get    'lowprice',  to: 'menus#lowprice'
   get    'glutenfree',  to: 'menus#glutenfree'
   get    'vege',  to: 'menus#vege'
+  get    'like',  to: 'menus#like'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

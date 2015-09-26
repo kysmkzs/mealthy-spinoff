@@ -51,6 +51,10 @@ class MenusController < ApplicationController
     @vege = Menu.where(vege: '0').all
   end
 
+  def like
+    @like = Favo.where(user: 'like').all
+  end
+
   private
   def menu_params
     params.require(:menu).permit(:name, :calorie, :image, :protein, :lipid, :carb, :sodium, :price, :gluten, :vege, :type)

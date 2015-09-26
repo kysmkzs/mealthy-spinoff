@@ -1,0 +1,13 @@
+<div class="row">
+  <aside class="col-xs-12">
+    <section class="user_info">
+      <div class="img">
+        <%= image_tag @user.image.url, :size => '100x100' %>
+      </div>
+        <span style="font-size:28px;" ><%= @user.name %></span>
+        <div><br>
+          <%= render 'follow_form' if logged_in? %>
+        </div>
+    </section>
+  </aside>
+</div>

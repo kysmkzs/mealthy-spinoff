@@ -20,4 +20,9 @@ class FavoritesController < ApplicationController
       current_user.unlike @menu
     end
   end
+  
+  private
+  def like_params
+    params.require(:menu).permit(:type)
+  end
 end
