@@ -1,5 +1,5 @@
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-xs-4">
     <section class="user_info">
         <%= gravatar_for @user %>
         <%= @user.name %>
@@ -8,7 +8,7 @@
         </div>
     </section>
   </aside>
-  <div class="col-md-8">
+  <div class="col-xs-8">
     <% if @user.posts.any? %>
       <h3>M Y　F E E D</h3>
       <ol class="posts">
