@@ -1,0 +1,31 @@
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3" style="background-color:#EA6052;"><%= link_to "低カロリー", lowcalorie_path %></div>
+      <div class="col-sm-3" style="background-color:#7FB7FF;"><%= link_to "低糖質", lowcarb_path %></div>
+      <div class="col-sm-3" style="background-color:#FECC27;"><%= link_to "グルテンフリー", glutenfree_path %></div>
+      <div class="col-sm-3" style="background-color:#17A980;"><%= link_to "ベジタリアン", vege_path %></div>
+    </div>
+  </div><br>
+  
+<!--
+  <div class="search">
+  <%# form_tag new_item_path , method: :get do %>
+    <%# text_field_tag :q , params[:q], placeholder: "キーワードを入力", required: true %>
+    <%# submit_tag "アイテムを検索", name: nil , class: "btn btn-success", data: { disable_with: "検索中..."} %>
+  <%# end %>
+</div>
+<div class="search-result">
+  <%# if @amazon_items.present? %>
+    <div class="alert alert-info">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      気になったアイテムが欲しければ「Want」持ってれば「Have」しましょう
+    </div>
+    <%# render 'amazon_items' , amazon_items: @amazon_items %>
+  <%# elsif params[:q].present? %>
+    <div class="alert alert-danger">
+      <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+      検索したアイテムはありません
+    </div>
+  <%# end %>
+</div>
+-->

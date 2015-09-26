@@ -1,12 +1,5 @@
 <% if logged_in? %>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3" style="background-color:#EA6052;"><%= link_to "低カロリー", lowcalorie_path %></div>
-      <div class="col-sm-3" style="background-color:#7FB7FF;"><%= link_to "低糖質", lowcarb_path %></div>
-      <div class="col-sm-3" style="background-color:#FECC27;"><%= link_to "グルテンフリー", glutenfree_path %></div>
-      <div class="col-sm-3" style="background-color:#17A980;"><%= link_to "ベジタリアン", vege_path %></div>
-    </div>
-  </div><br>
+  <%= render 'category' %>
 
   <div class="row">
     <aside class="col-md-4">
@@ -15,8 +8,8 @@
       <div>
         <% @vege.each do |menu| %>
           <li class="posts">
-            <p><%= menu.name %> <%= menu.calorie %>[kcal]</p>
-            <p><%= image_tag menu.image.url %></p><br>
+            <p><%= image_tag menu.image.url %></p>
+            <p><%= menu.name %> <%= menu.calorie %>[kcal]</p><br>
           </li>
         <% end %>
       </div>
@@ -24,8 +17,5 @@
   </div>
   
 <% else %>
-  <div class="center jumbotron">
-    <h1>Welcome to Mealthy</h1>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-danger" %>
-  </div>
+  <%= render 'signup' %>
 <% end %>
