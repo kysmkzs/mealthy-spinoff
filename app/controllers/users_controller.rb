@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Mealthy App!"
       redirect_to @user
     else
       render 'new'
@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
+    if logged_in?
+      @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
+    end
   end
 
   def edit

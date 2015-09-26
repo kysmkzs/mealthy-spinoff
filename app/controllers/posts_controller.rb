@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
   before_action :logged_in_user, only: [:create]
 
+  def index
+    @posts = Post.all.order(created_at: :desc)
+    @post = Post.new
+    
+  end
+
   def create
     @post = current_user.posts.build(post_params)
     if @post.save

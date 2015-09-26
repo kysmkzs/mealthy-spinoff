@@ -1,0 +1,2 @@
+class Favo < Favorite
+end

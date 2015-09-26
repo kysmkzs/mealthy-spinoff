@@ -2,19 +2,28 @@
   <%= render 'category' %>
 
   <div class="row">
-    <aside class="col-md-4">
-    </aside>
-    <div class="col-md-8">
-      <div>
+    <div class="col-md-12">
+      <div class="container">
+      <div class="container-inner inner-default clearfix">
         <% @glutenfree.each do |menu| %>
-          <li class="posts">
-            <p><%= image_tag menu.image.url %></p>
-            <p><%= menu.name %> <%= menu.calorie %>[kcal]</p><br>
-          </li>
+          <div class="item-box">
+            <div class="image">
+              <div class="img-wrap">
+              <p><%= image_tag menu.image.url %></p>
+              </div>
+            </div>
+            <div class="detail">
+              <p class="title">
+                <%= menu.name %> <%= menu.calorie %>[kcal]
+              </p>
+            </div>
+            <%= render 'menus/action' , menu: menu if logged_in? %>
+          </div>
         <% end %>
       </div>
+      </div>
     </div>
-  </div>
+  </div>  
   
 <% else %>
   <%= render 'signup' %>

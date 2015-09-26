@@ -1,0 +1,11 @@
+<div class="action">
+  <% if current_user.favo? menu %>
+    <%= render 'menus/unfavo' , menu: menu %>
+  <% else %>
+    <%= render 'menus/favo' , menu: menu %>
+  <% end %> 
+
+  <% unless current_page?(menu) %>
+    <%= link_to "詳細" , menu , class: "btn btn-info btn-sm" %>
+  <% end %>
+</div>

@@ -1,5 +1,3 @@
-<h3>Menu Register</h3>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@menu) do |f| %>
@@ -30,9 +28,6 @@
 
       <%= f.label :ベジ（０：ベジ、１：ノンベジ、２：不明） %>
       <%= f.text_field :vege %>
-      
-      <%= f.label :種別（０：お弁当、１：惣菜、２：サラダ、３：おにぎり、４：サンドイッチ、５：その他） %>
-      <%= f.text_field :type %>
  
       <%= f.label :メニュー写真 %>
       <%= f.file_field :image %><br><br>

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
   resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:create, :destroy]
   resources :feeds, only: [:show]
   resources :menus
 end

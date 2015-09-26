@@ -1,9 +1,9 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
     <%= f.label :image %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image %><br>
+    <%= f.text_area :content, placeholder: "Compose new healthy meal..." %>
   </div>
   <br>
   <%= f.submit "S H A R E", class: "btn btn-danger" %>

@@ -1,18 +1,19 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
+        <div><br>
+          <%= render 'follow_form' if logged_in? %>
+        </div>
     </section>
   </aside>
   <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
+
     <% if @user.posts.any? %>
-      <h3>Posts (<%= @user.posts.count %>)</h3>
+      <h3>M Y　F E E D</h3>
       <ol class="posts">
-        <%= render @posts %>
+        <%= render 'static_pages/feed' %>
       </ol>
     <% end %>
   </div>
