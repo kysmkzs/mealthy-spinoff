@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   get    'register',  to: 'menus#new'
   get    'menus/index',  to: 'menus#index'
   get    'lowcalorie',  to: 'menus#lowcalorie'
+  get    'lowcarb',  to: 'menus#lowcarb'
+  get    'lowsodium',  to: 'menus#lowsodium'
+  get    'lowprice',  to: 'menus#lowprice'
+  get    'glutenfree',  to: 'menus#glutenfree'
+  get    'vege',  to: 'menus#vege'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

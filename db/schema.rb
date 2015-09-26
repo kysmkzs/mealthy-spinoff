@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924141823) do
+ActiveRecord::Schema.define(version: 20150926042938) do
 
   create_table "menus", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20150924141823) do
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "protein"
+    t.float    "lipid"
+    t.float    "carb"
+    t.float    "sodium"
+    t.integer  "price"
+    t.integer  "gluten"
+    t.integer  "vege"
+    t.integer  "type"
   end
 
   create_table "posts", force: :cascade do |t|

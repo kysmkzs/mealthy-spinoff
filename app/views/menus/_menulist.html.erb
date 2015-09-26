@@ -5,10 +5,12 @@
       <div>
         <% @menus.each do |menu| %>
           <li class="posts">
-            <p>メニュー名：<%= menu.name %></p>
-            <p>カロリー[kcal]：<%= menu.calorie %></p><br>
+            <p><%= menu.name %> <%= menu.calorie %>[kcal]</p>
+            <p><%= image_tag menu.image.url %></p><br>
           </li>
         <% end %>
       </div>
     </div>
   </div>
+  
+  

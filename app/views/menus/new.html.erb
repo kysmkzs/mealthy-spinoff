@@ -7,9 +7,33 @@
       <%= f.label :メニュー名 %>
       <%= f.text_field :name %>
 
-      <%= f.label :カロリー %>
+      <%= f.label :カロリー（ｋａｃｌ） %>
       <%= f.text_field :calorie %>
 
+      <%= f.label :たんぱく質（ｇ） %>
+      <%= f.text_field :protein %>
+
+      <%= f.label :脂質（ｇ） %>
+      <%= f.text_field :lipid %>
+
+      <%= f.label :炭水化物（ｇ） %>
+      <%= f.text_field :carb %>
+
+      <%= f.label :塩分（Ｎａ）（ｍｇ） %>
+      <%= f.text_field :sodium %>
+
+      <%= f.label :価格（円） %>
+      <%= f.text_field :price %>
+
+      <%= f.label :グルテン（０：なし、１：あり、２：不明） %>
+      <%= f.text_field :gluten %>
+
+      <%= f.label :ベジ（０：ベジ、１：ノンベジ、２：不明） %>
+      <%= f.text_field :vege %>
+      
+      <%= f.label :種別（０：お弁当、１：惣菜、２：サラダ、３：おにぎり、４：サンドイッチ、５：その他） %>
+      <%= f.text_field :type %>
+ 
       <%= f.label :メニュー写真 %>
       <%= f.file_field :image %><br><br>
 

@@ -15,7 +15,7 @@
       <div>
         <% @menu.each do |menu| %>
           <li class="posts">
-            <p><%= menu.name %> <%= menu.calorie %>[kcal]</p>
+            <p><%= menu.name %> <%= menu.calorie %>[kcal] (<%= menu.carb %>[g])</p>
             <p><%= image_tag menu.image.url %></p><br>
           </li>
         <% end %>

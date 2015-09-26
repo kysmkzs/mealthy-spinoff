@@ -6,6 +6,7 @@ class CreateMenus < ActiveRecord::Migration
       t.string :image
 
       t.timestamps null: false
+      t.index :created_at
     end
   end
 end

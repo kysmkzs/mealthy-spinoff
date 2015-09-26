@@ -33,10 +33,21 @@ class MenusController < ApplicationController
   def lowcalorie
     @menu = Menu.order("calorie asc")
   end
- 
-  private
-  def menu_params
-    params.require(:menu).permit(:name, :calorie, :image)
+
+  def lowcarb
+    @menu = Menu.order("carb asc")
   end
 
+  def glutenfree
+    @glutenfree = Menu.where(gluten: '0').all
+  end
+
+  def vege
+    @vege = Menu.where(vege: '0').all
+  end
+
+  private
+  def menu_params
+    params.require(:menu).permit(:name, :calorie, :image, :protein, :lipid, :carb, :sodium, :price, :gluten, :vege, :type)
+  end
 end
