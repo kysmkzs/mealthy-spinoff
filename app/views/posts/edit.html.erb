@@ -1,0 +1,17 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your post</h1>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= form_for(@post) do |f| %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control' %>
+
+      <%= f.label :画像 %>
+      <%= f.file_field :image %><br><br>
+
+      <%= f.submit "S A V E　C H A N G E S", class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>

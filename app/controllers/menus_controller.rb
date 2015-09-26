@@ -16,6 +16,11 @@ class MenusController < ApplicationController
       render 'new'
     end
   end
+
+  def show
+    @menu = Menu.find(params[:id])
+    @post = current_user.posts.build(@post_params)
+  end
   
   def edit
     @menu = Menu.find(params[:id])

@@ -1,0 +1,4 @@
+<%= link_to "Like" , favorites_path(menu_id: menu.id , type: "Like") ,
+    :class => "Like-#{menu.id} btn-like btn btn-success btn-sm like",
+    :remote => true,
+    :method => :post %>

@@ -1,0 +1,6 @@
+<%= link_to "liked" , 
+    favorite_path(current_user.likes.find_by(:menu_id => menu.id) , 
+      menu_id: menu.id , type: "Unlike") ,
+    :class => "like-#{menu.id} btn-like btn btn-danger btn-sm liked",
+    :remote => true,
+    :method => :delete %>

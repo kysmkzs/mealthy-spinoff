@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
+  mount_uploader :image, ImageUploader
   
   has_many :posts
 
@@ -24,8 +25,8 @@ class User < ActiveRecord::Base
   has_many :favorites , foreign_key: "user_id", dependent: :destroy
   has_many :menus, through: :favorites
   
-  has_many :favos, class_name: "Favo", foreign_key: "user_id", dependent: :destroy
-  has_many :favo_items , through: :favos, source: :menu
+  has_many :likes, class_name: "Favo", foreign_key: "user_id", dependent: :destroy
+  has_many :like_menus , through: :likes, source: :menu
 
   # 他のユーザーをフォローする
   def follow(other_user)
@@ -42,23 +43,22 @@ class User < ActiveRecord::Base
     following_users.include?(other_user)
   end
 
-  # メニューをfavoする
-  def favo(menu)
-    favos.find_or_create_by(menu_id: menu.id)
+  # メニューをlikeする
+  def like(menu)
+    likes.find_or_create_by(menu_id: menu.id)
   end
 
-  # アイテムをunfavoする
-  def unfavo(menu)
-    favos.find_by(menu_id: menu.id).destroy
+  # アイテムをunlikeする
+  def unlike(menu)
+    likes.find_by(menu_id: menu.id).destroy
   end
 
-  # あるアイテムをfavoしているかどうか？
-  def favo?(menu)
-    favo_items.include?(menu)
+  # あるアイテムをlikeしているかどうか？
+  def like?(menu)
+    like_menus.include?(menu)
   end
-  
+
   def feed_items
     Post.where(user_id: following_user_ids + [self.id])
   end
-  
 end

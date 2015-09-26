@@ -1,0 +1,34 @@
+<% content_for :head do %>
+  <title>
+    <%= @menu.name %> - Mealthy
+  </title>
+  <meta name="description" content="<%= @menu.name %>に関する情報です">
+  <meta name="keywords" content="Mealthy,<%= @menu.name %>">
+<% end %>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="container">
+      <div class="container-inner inner-default clearfix">
+        <div class="item-box">
+          <div class="image">
+            <div class="img-wrap">
+              <%= image_tag @menu.image.url %>
+            </div>
+          </div>
+　        <section>
+　          <p>《メニュー詳細》</p>     
+            <p><%= @menu.name %></p>
+            <p>価格：<%= @menu.price %>円（税込）</p>
+            <p>カロリー：<%= @menu.calorie %>kcal</p>
+            <p>たんぱく質：<%= @menu.protein %>g</p>
+            <p>脂質：<%= @menu.lipid %>g</p>
+            <p>炭水化物：<%= @menu.carb %>g</p>        
+            <p>塩分（Na）：<%= @menu.sodium %>mg</p>
+          </section><br>
+          <%= render 'shared/post_form' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

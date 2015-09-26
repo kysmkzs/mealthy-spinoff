@@ -1,8 +1,10 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :画像を投稿する！ %>
     <%= f.file_field :image %><br>
+
+    <%= f.label :クチコミを書く！ %>
     <%= f.text_area :content, placeholder: "Compose new healthy meal..." %>
   </div>
   <br>
