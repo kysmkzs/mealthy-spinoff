@@ -1,12 +1,14 @@
 <%= render 'profile' %>
 
-<div class="row">
-  <div class="col-sm-12">
-    <% if @user.posts.any? %>
-      <h3>M Y　F E E D</h3>
-      <ol class="posts">
-        <%= render 'static_pages/feed' %>
-      </ol>
-    <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <% if @user.posts.any? %>
+        <h3>M Y　F E E D</h3>
+        <ol class="posts">
+          <%= render 'static_pages/feed' %>
+        </ol>
+      <% end %>
+    </div>
   </div>
 </div>

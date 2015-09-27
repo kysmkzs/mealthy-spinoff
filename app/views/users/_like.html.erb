@@ -1,0 +1,4 @@
+<%= form_for(current_user.liking_favorites.build, remote: true) do |f| %>
+  <div><%= hidden_field_tag :menu_id, current_user.id %></div>
+  <%= f.submit "Like", class: "btn btn-success btn-sm" %>
+<% end %>

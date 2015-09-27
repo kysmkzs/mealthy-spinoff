@@ -4,10 +4,10 @@ class MenusController < ApplicationController
   end
 
   def index
-    @menus = Menu.all
+    @menus = Menu.all.order("updated_at DESC").limit(50)
   end
 
-  def create
+  def create  
     @menu = Menu.new(menu_params)
     if @menu.save
       flash[:success] = "Enjoy Healthy Meal !"
@@ -36,23 +36,23 @@ class MenusController < ApplicationController
   end
 
   def lowcalorie
-    @menu = Menu.order("calorie asc")
+    @menus = Menu.order("calorie asc")
   end
 
   def lowcarb
-    @menu = Menu.order("carb asc")
+    @menus = Menu.order("carb asc")
   end
 
   def glutenfree
-    @glutenfree = Menu.where(gluten: '0').all
+    @glutenfrees = Menu.where(gluten: '0').all
   end
 
   def vege
-    @vege = Menu.where(vege: '0').all
+    @veges = Menu.where(vege: '0').all
   end
 
   def like
-    @like = Favo.where(user: 'like').all
+    @like = Favorite.where(like: 'like').all
   end
 
   private

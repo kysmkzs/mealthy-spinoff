@@ -1,8 +1,8 @@
 <div class="action">
-  <% if current_user.like? menu %>
-    <%= render 'menus/unlike' , menu: menu %>
+  <% if current_user.liking? menu %>
+    <%= render 'users/unlike' , menu: menu %>
   <% else %>
-    <%= render 'menus/like' , menu: menu %>
+    <%= render 'users/like' , menu: menu %>
   <% end %> 
 
   <% unless current_page?(menu) %>

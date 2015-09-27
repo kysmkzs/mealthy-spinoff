@@ -1,9 +1,9 @@
 <% if logged_in? %>
   <%= render 'category' %>
 
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
-      <div class="container">
       <div class="container-inner inner-default clearfix">
         <% @like.each do |menu| %>
           <div class="item-box">
@@ -17,13 +17,13 @@
                 <%= menu.name %> <%= menu.calorie %>[kcal]
               </p>
             </div>
-            <%= render 'menus/action' , menu: menu if logged_in? %>
+            <%= render 'users/like_form' ,user: @user , menu: menu if logged_in? %>
           </div>
         <% end %>
       </div>
-      </div>
     </div>
-  </div>  
+  </div>
+</div>  
   
 <% else %>
   <%= render 'signup' %>

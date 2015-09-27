@@ -21,12 +21,15 @@ class User < ActiveRecord::Base
                                     dependent:   :destroy
   has_many :follower_users, through: :follower_relationships, source: :follower
 
-  #お気に入りメニューの設定
-  has_many :favorites , foreign_key: "user_id", dependent: :destroy
-  has_many :menus, through: :favorites
-  
-  has_many :likes, class_name: "Favo", foreign_key: "user_id", dependent: :destroy
-  has_many :like_menus , through: :likes, source: :menu
+  # お気に入りメニューの設定
+  has_many :liking_favorites, class_name:  "Favorite",
+                              foreign_key: "user_id",
+                              dependent:   :destroy
+  has_many :liking_menus, through: :liking_favorites, source: :menu
+
+
+  # has_many :likes, class_name: "Favo", foreign_key: "user_id", dependent: :destroy
+  # has_many :like_menus , through: :likes, source: :menu
 
   # 他のユーザーをフォローする
   def follow(other_user)
@@ -45,17 +48,17 @@ class User < ActiveRecord::Base
 
   # メニューをlikeする
   def like(menu)
-    likes.find_or_create_by(menu_id: menu.id)
+    liking_favorites.find_or_create_by(menu_id: menu.id)
   end
 
   # アイテムをunlikeする
   def unlike(menu)
-    likes.find_by(menu_id: menu.id).destroy
+    liking_favorites.find_by(menu_id: menu.id).destroy
   end
 
   # あるアイテムをlikeしているかどうか？
   def like?(menu)
-    like_menus.include?(menu)
+    liking_menus.include?(menu)
   end
 
   def feed_items

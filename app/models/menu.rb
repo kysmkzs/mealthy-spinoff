@@ -4,10 +4,9 @@ class Menu < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   #お気に入りユーザーの設定
-  has_many :favorites , foreign_key: "menu_id", dependent: :destroy
-  has_many :users, through: :favorites
+  has_many :liking_favorites, class_name:  "Favorite",
+                              foreign_key: "user_id",
+                              dependent:   :destroy
+  has_many :liked_users, through: :liking_favorites, source: :user
 
-  has_many :favos, class_name: "Favo", foreign_key: "menu_id", dependent: :destroy
-  has_many :favo_users , through: :favos, source: :user
-  
 end

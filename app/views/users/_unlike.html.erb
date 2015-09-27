@@ -1,0 +1,5 @@
+<%= form_for(current_user.liking_favorites.find_by(menu_id: menu.id),
+             html: { method: :delete },
+             remote: true) do |f| %>
+  <%= f.submit "Liked", class: "btn btn-danger btn-sm" %>
+<% end %>

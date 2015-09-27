@@ -1,15 +1,16 @@
 <% if logged_in? %>
-
   <%= render 'menus/category' %>
-  
-  <div class="row">
-    <aside class="col-xs-12">
-      <section class="post_form">
-        <%= render 'shared/post_form' %>
-      </section>
-    </aside>
 
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-xs-12">
+        <section class="post_form">
+          <%= render 'shared/post_form' %>
+        </section>
+      </aside>
+    </div>
   </div>
+
 <% else %>
   <%= render 'menus/signup' %>
 <% end %>

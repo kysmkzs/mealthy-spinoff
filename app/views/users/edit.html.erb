@@ -1,26 +1,31 @@
 <% provide(:title, "Edit user") %>
 <h1>Update your profile</h1>
 
-<div class="row">
-  <div class="col-xs-12">
-    <%= form_for(@user) do |f| %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= form_for(@user) do |f| %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+        <%= f.label :好きな食べ物 %>
+        <%= f.text_field :likefood, class: 'form-control' %><br>
       
-      <%= f.label :プロフィール写真 %>
-      <%= f.file_field :image %><br><br>
+        <%= f.label :プロフィール写真 %>
+        <%= f.file_field :image %><br><br>
 
-      <%= f.submit "S A V E　C H A N G E S", class: "btn btn-danger" %>
-    <% end %>
+        <%= f.submit "S A V E　C H A N G E S", class: "btn btn-danger" %>
+      <% end %>
+    </div>
   </div>
 </div>

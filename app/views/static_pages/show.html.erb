@@ -1,9 +1,12 @@
 <% if logged_in? %>
-  <div class="row">
-    <div class="col-xs-12">
-      <%= render 'feed' %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= render 'feed' %>
+      </div>
     </div>
   </div>
+
 <% else %>
   <%= render 'menus/signup' %>
 <% end %>

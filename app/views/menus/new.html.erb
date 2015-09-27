@@ -1,38 +1,40 @@
-<div class="row">
-  <div class="col-xs-12">
-    <%= form_for(@menu) do |f| %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= form_for(@menu) do |f| %>
 
-      <%= f.label :メニュー名 %>
-      <%= f.text_field :name %>
+        <%= f.label :メニュー名 %>
+        <%= f.text_field :name %>
 
-      <%= f.label :カロリー（ｋａｃｌ） %>
-      <%= f.text_field :calorie %>
+        <%= f.label :カロリー（ｋａｃｌ） %>
+        <%= f.text_field :calorie %>
 
-      <%= f.label :たんぱく質（ｇ） %>
-      <%= f.text_field :protein %>
+        <%= f.label :たんぱく質（ｇ） %>
+        <%= f.text_field :protein %>
 
-      <%= f.label :脂質（ｇ） %>
-      <%= f.text_field :lipid %>
+        <%= f.label :脂質（ｇ） %>
+        <%= f.text_field :lipid %>
 
-      <%= f.label :炭水化物（ｇ） %>
-      <%= f.text_field :carb %>
+        <%= f.label :炭水化物（ｇ） %>
+        <%= f.text_field :carb %>
 
-      <%= f.label :塩分（Ｎａ）（ｍｇ） %>
-      <%= f.text_field :sodium %>
+        <%= f.label :塩分（Ｎａ）（ｍｇ） %>
+        <%= f.text_field :sodium %>
 
-      <%= f.label :価格（円） %>
-      <%= f.text_field :price %>
+        <%= f.label :価格（円） %>
+        <%= f.text_field :price %>
 
-      <%= f.label :グルテン（０：なし、１：あり、２：不明） %>
-      <%= f.text_field :gluten %>
+        <%= f.label :グルテン（０：なし、１：あり、２：不明） %>
+        <%= f.text_field :gluten %>
 
-      <%= f.label :ベジ（０：ベジ、１：ノンベジ、２：不明） %>
-      <%= f.text_field :vege %>
- 
-      <%= f.label :メニュー写真 %>
-      <%= f.file_field :image %><br><br>
+        <%= f.label :ベジ（０：ベジ、１：ノンベジ、２：不明） %>
+        <%= f.text_field :vege %>
 
-      <%= f.submit "R E G I S T E R", class: "btn btn-large btn-danger" %>
-    <% end %>
+        <%= f.label :メニュー写真 %>
+        <%= f.file_field :image %><br><br>
+
+        <%= f.submit "R E G I S T E R", class: "btn btn-large btn-danger" %>
+      <% end %>
+    </div>
   </div>
 </div>
