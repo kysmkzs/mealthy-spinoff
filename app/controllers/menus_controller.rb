@@ -44,15 +44,15 @@ class MenusController < ApplicationController
   end
 
   def glutenfree
-    @glutenfrees = Menu.where(gluten: '0').all
+    @glutenfrees = Menu.where(gluten: '0').order("updated_at DESC").limit(50)
   end
 
   def vege
-    @veges = Menu.where(vege: '0').all
+    @veges = Menu.where(vege: '0').order("updated_at DESC").limit(50)
   end
 
   def like
-    @like = Favorite.where(like: 'like').all
+    @likes = current_user.liking_menus.order("updated_at DESC").limit(50)
   end
 
   private
