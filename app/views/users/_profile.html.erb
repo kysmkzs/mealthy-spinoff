@@ -5,8 +5,11 @@
         <%= image_tag @user.image.url, :size => '100x100' %>
       </div>
         <span style="font-size:28px;" ><%= @user.name %></span>
+        <% if current_user == @user %>
+          <%= link_to "E D I T", edit_user_path(current_user) %>
+        <% end %>
         <div><br>
-          <%= render 'follow_form' if logged_in? %>
+          <%= render 'follow_form' if logged_in? %><br>
         </div>
     </section>
   </aside>

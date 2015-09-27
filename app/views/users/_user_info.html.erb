@@ -1,3 +1,6 @@
+<!-- # 使っていない可能性あり！！！ -->
+
+<%= link_to image_tag(current_user.image.url, :size => '40x40', alt: current_user.name), current_user %>
 <%= link_to gravatar_for(current_user, size: 50), current_user %>
 <h1><%= current_user.name %></h1>
 <span><%= link_to "E D I T", edit_user_path %></span>

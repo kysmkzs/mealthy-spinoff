@@ -6,7 +6,7 @@
       <ol class="posts">
         <% @posts.each do |post| %>
           <li>
-            <%= link_to gravatar_for(post.user, size: 40), post.user %>
+            <%= link_to image_tag(post.user.image.url, :size => '40x40', alt: post.user.name), post.user %>
             <span class="user"><%= link_to post.user.name, post.user %></span>
             <span class="content"><%= post.content %></span>
             <span class="image"><%= image_tag post.image.url %></span>
