@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
   # メニューをlikeする
   def like(menu)
-    liking_favorites.find_or_create_by(menu_id: menu.id)
+    liking_favorites.create(menu_id: menu.id)
   end
 
   # アイテムをunlikeする

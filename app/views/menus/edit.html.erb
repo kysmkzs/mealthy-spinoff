@@ -1,4 +1,19 @@
   <div class="row">
+    <div class="col-sm-6">
+      <%= image_tag @menu.image.url %>
+    </div>
+　  <section class="col-sm-6">
+      <h3><%= @menu.name %></h3>
+      <p>価格：<%= @menu.price %>円（税込）</p>
+      <p>カロリー：<%= @menu.calorie %>kcal</p>
+      <p>たんぱく質：<%= @menu.protein %>g</p>
+      <p>脂質：<%= @menu.lipid %>g</p>
+      <p>炭水化物：<%= @menu.carb %>g</p>
+      <p>塩分（Na）：<%= @menu.sodium %>mg</p>
+    </section><br>
+  </div>
+  
+  <div class="row">
     <div class="col-xs-12">
       <%= form_for(@menu) do |f| %>
 
@@ -32,7 +47,7 @@
         <%= f.label :メニュー写真 %>
         <%= f.file_field :image %><br><br>
 
-        <%= f.submit "R E G I S T E R", class: "btn btn-large btn-danger" %>
+        <%= f.submit  "S A V E  C H A N G E S", class: "btn btn-large btn-danger" %>
       <% end %>
     </div>
   </div>

@@ -208,7 +208,7 @@ header {
       padding: 0 !important;
     }
     .navbar-inner {
-      max-width: 1200px;
+      max-width: 768px;
       margin: 0 auto;
       .navbar-header {
         h1 {
@@ -222,7 +222,6 @@ header {
             background-size: contain;
             display: block;
             white-space: nowrap;
-            text-indent: 99999px;
           }
         }
       }
