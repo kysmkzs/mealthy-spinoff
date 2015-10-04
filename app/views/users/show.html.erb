@@ -1,5 +1,6 @@
 <%= render 'profile' %>
 
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
       <% if @user.posts.any? %>
@@ -10,3 +11,4 @@
       <% end %>
     </div>
   </div>
+</div>

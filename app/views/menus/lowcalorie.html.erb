@@ -1,6 +1,7 @@
 <% if logged_in? %>
   <%= render 'category' %>
 
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
       <div class="container-inner inner-default clearfix">
@@ -22,6 +23,7 @@
       </div>
     </div>
   </div>
+</div>
 
 <% else %>
   <%= render 'signup' %>

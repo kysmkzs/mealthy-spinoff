@@ -1,5 +1,6 @@
 <h1>Log in</h1>
 
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
       <%= form_for(:session, url: login_path) do |f| %>
@@ -16,3 +17,4 @@
       <p>New user? <%= link_to "Sign up now!", signup_path %></p>
     </div>
   </div>
+</div>

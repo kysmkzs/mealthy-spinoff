@@ -1,5 +1,7 @@
 <h3>F E E D</h3>
+
 <% if logged_in? %>
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
       <ol class="posts">
@@ -22,6 +24,7 @@
       </ol>
     </div>
   </div>
+</div>
 
 <% else %>
   <%= render 'menus/signup' %>

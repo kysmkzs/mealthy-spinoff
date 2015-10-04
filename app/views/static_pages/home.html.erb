@@ -1,6 +1,7 @@
 <% if logged_in? %>
   <%= render 'menus/category' %>
 
+  <div class="container-fluid">
     <div class="row">
       <aside class="col-xs-12">
         <section class="post_form">
@@ -8,6 +9,7 @@
         </section>
       </aside>
     </div>
+  </div>
 
 <% else %>
   <%= render 'menus/signup' %>

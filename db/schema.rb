@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150927031203) do
+ActiveRecord::Schema.define(version: 20151002065627) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20150927031203) do
     t.integer  "price"
     t.integer  "gluten"
     t.integer  "vege"
-    t.integer  "type"
   end
 
   add_index "menus", ["created_at"], name: "index_menus_on_created_at"
