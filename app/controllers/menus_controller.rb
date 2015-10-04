@@ -28,7 +28,7 @@ class MenusController < ApplicationController
 
   def update
     @menu = Menu.find(params[:id])
-    if @menu.update(user_params)
+    if @menu.update(menu_params)
       redirect_to edit_menu_path , notice: 'メニューを更新しました'
     else
       render 'edit'
