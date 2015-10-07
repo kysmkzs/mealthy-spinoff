@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mealthy
+  api_key: '494757752295975'
+  api_secret: RO9KzKdV9fJI51tOnwOduBnHv-w
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: mealthy
+  api_key: '494757752295975'
+  api_secret: RO9KzKdV9fJI51tOnwOduBnHv-w
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: mealthy
+  api_key: '494757752295975'
+  api_secret: RO9KzKdV9fJI51tOnwOduBnHv-w
+  enhance_image_tag: true
+  static_image_support: false
